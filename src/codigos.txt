@@ -1,0 +1,7 @@
+npm init --y
+npm i express
+npm i morgan
+npm i msql2
+npm i cors
+npm i dotenv
+npm i nodemon
