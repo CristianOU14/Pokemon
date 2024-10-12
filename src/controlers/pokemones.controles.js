@@ -3,9 +3,9 @@ const getpokemones = async (req,res) =>
     {   
         try 
         {
-            const connection = await getConnection
+            const connection = await getConnection()
             const result = await connection.query('SELECT * FROM pokemon')
-            res.json(result);
+            res.json(result[0]);
         } catch (error) 
         {
             console.log ('error');
