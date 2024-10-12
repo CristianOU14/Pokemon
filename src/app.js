@@ -1,5 +1,5 @@
 import express from "express";
-import router from "./reoutes/pokemones.routes.js";
+import router from "./routes/pokemones.routes.js";
 const app = express();
 
 app.set('port',3000);

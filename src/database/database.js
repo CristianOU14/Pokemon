@@ -1,28 +1,14 @@
-const database = [
-    {
-        id: '1',
-        nombre : 'Pikachu',
-        nivel : '50'
-    },
-    {
-        id: '2',
-        nombre : 'Charizard',
-        nivel : '55'
-    },
-    {
-        id: '3',
-        nombre : 'Venusaur',
-        nivel : '49'
-    },
-    {
-        id: '4',
-        nombre : 'Blastoise',
-        nivel : '53'
-    },
-    {
-        id: '5',
-        nombre : 'Rattata',
-        nivel : '51'
-    }
-]
-export default database;
+import mysql from "mysql2/promise";
+import config from "../config";
+
+const connection = mysql.createConnection({
+    host: config.dbHost,
+    user: config.dbUser,
+    password: config.dbPassword,
+    database : config.dbName,
+    port : config.dbPort
+});
+const getConnection = ()=>{
+    return connection;
+};
+export {getConnection};
